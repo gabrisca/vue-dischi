@@ -10,6 +10,7 @@
 
 <script>
 export default {
+  // preparo Header per essere esportato
   name: 'Header'
 }
 </script>

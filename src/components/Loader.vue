@@ -13,7 +13,9 @@
 
 <script>
 export default {
+  // preparo Loader per essere esportato
   name: "Loader",
+  // props per cambiare il titolo all'occorrenza
   props: {
     title: String,
   },
