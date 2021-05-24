@@ -1,49 +1,27 @@
 <template>
   <div id="app">
-    <div class="container">
-      <div class="row">
-        <div class="col-md-6">
-          ciao
-        </div>
-        <div class="col-md-6">
-          ciao
-        </div>
-        <div class="col-md-6">
-          ciao
-        </div>
-        <div class="col-md-6">
-          ciao
-        </div>
-      </div>
-    </div>
+    <Header />
   </div>
 </template>
 
 <script>
 import axios from 'axios'
+import Header from './components/Header.vue'
 
 export default {
   name: 'App',
   components: {
-
+    Header
   },
 data(){
   return {
     axios,
   }
 },
-// created(){
-//   axios.get('https://flynn.boolean.careers/exercises/api/array/music')
-//   .the(risp =>{
-//     console.log(risp.data.title);
-//   })
-//   .catch(error =>{
-//     console.log(error);
-//   })
-// },
 }
 </script>
 
 <style lang="scss">
-  @import '@/assets/styles/general'
+// importo il foglio di stile general.scss
+  @import '@/assets/style/general';
 </style>
