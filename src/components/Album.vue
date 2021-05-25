@@ -1,7 +1,7 @@
 <template>
-  <div id="album" class="col-sm-6 col-md-2 m-3">
+  <div id="album" class="col-sm-6 col-md-3 col-lg-2 m-3">
     <img :src="album.poster" class="img-fluid" :alt="album.title" />
-    <h3>{{ album.title }}</h3>
+    <h3 class="d-flex justify-content-center">{{ album.title }}</h3>
     <h5>{{ album.author }}</h5>
     <h5>{{ album.year }}</h5>
   </div>
