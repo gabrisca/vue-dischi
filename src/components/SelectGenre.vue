@@ -1,8 +1,10 @@
 <template>
   <div>
-    <select class="form-select mc_form mt-4" aria-label="Genre selection">
+    <select
+    v-model="searchGenre"
+     class="form-select mc_form mt-4" 
+     aria-label="Genre selection">
       <option 
-      @click='filterGenres'
       v-for="(genre, index) in genresArray"
       :key="index"
       selected
@@ -23,11 +25,15 @@ export default {
     return {
       // creo un array vuoto dove caricare i generi degli album
       genresArray: ['Select your favorite music',],
+      searchGenre: 'Select your favorite music'
     }
   },
-  methods: {
-    filterGenres(){
-      // console.log('eccomi');
+    methods: {
+    // funzione che fa partire il filtro del genere musicale
+    startFilter(){
+      // $emit è un evento che viene letto dal padre
+      this.$emit('filterGenre', this.searchGenre)
+      console.log(this.searchGenre);
     }
   },
   created() {

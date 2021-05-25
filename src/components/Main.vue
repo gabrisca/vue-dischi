@@ -11,7 +11,7 @@
       <div class="text-center mt-3">
         <h6>Album trovati: {{ filteredAlbums.length }}</h6>
       </div>
-      <SelectGenre />
+      <SelectGenre :genres= 'genres'/>
     </div>
     <!-- se loading è true mostro Loader con icona caricamento pagina -->
     <Loader v-else title="Spotify" />
@@ -49,6 +49,8 @@ export default {
       albums: [],
       // variabile textToSearch che accoglie il testo inviato dal figlio (di default è vuota)
       textToSearch: "",
+      genres: [],
+      genreToSearch: ""
     };
   },
   computed: {
@@ -65,6 +67,10 @@ export default {
       this.textToSearch = text;
       console.log(text);
     },
+    searchingGenre(genre) {
+      this.genreToSearch = genre;
+      console.log(genre);
+    }
   },
   created() {
     // chiamata API
