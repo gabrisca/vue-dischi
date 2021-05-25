@@ -30,6 +30,7 @@ export default {
       img {
         height: 90%;
         cursor: pointer;
+        transition: all .8s;
         &:hover {
           filter: brightness(1.2);
         }
