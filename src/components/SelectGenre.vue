@@ -2,9 +2,12 @@
   <div>
     <select class="form-select mc_form mt-4" aria-label="Genre selection">
       <option 
+      @click='filterGenres'
       v-for="(genre, index) in genresArray"
       :key="index"
-      selected>{{genre}}</option>
+      selected
+      >{{genre}}
+      </option>
     </select>
   </div>
 </template>
@@ -20,6 +23,11 @@ export default {
     return {
       // creo un array vuoto dove caricare i generi degli album
       genresArray: ['Select your favorite music',],
+    }
+  },
+  methods: {
+    filterGenres(){
+      // console.log('eccomi');
     }
   },
   created() {
@@ -50,5 +58,9 @@ export default {
   .mc_form {
     width: 300px;
     margin: 0 auto;
+    &:focus {
+      border-color: #3AD65E;
+      box-shadow: inset 0 1px 1px #3ad65e5e, 0 0 4px #3AD65E;
+    }
   }
 </style>

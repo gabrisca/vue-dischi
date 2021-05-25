@@ -49,7 +49,6 @@ export default {
       albums: [],
       // variabile textToSearch che accoglie il testo inviato dal figlio (di default è vuota)
       textToSearch: "",
-      genres: [],
     };
   },
   computed: {
